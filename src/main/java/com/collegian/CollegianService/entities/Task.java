@@ -88,7 +88,7 @@ public class Task {
     @Override
     public String toString() {
         return "Task id: " + this.id + " name: " + this.name +
-                " finished: " + this.finished + " classId: " + this.courseId
+                " finished: " + this.finished + " courseId: " + this.courseId
                 + " date: " + this.date;
     }
 }
