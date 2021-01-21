@@ -11,15 +11,15 @@ public class Task {
     private @Id @GeneratedValue Long id;
     private String name;
     private Boolean finished;
-    private Long classId;
+    private Long courseId;
     private String date;
 
     public Task() {}
 
-    public Task(String name, Boolean finished, Long classId, String date) {
+    public Task(String name, Boolean finished, Long courseId, String date) {
         this.name = name;
         this.finished = finished;
-        this.classId = classId;
+        this.courseId = courseId;
         this.date = date;
     }
 
@@ -35,8 +35,8 @@ public class Task {
         return this.finished;
     }
 
-    public Long getClassId() {
-        return this.classId;
+    public Long getCourseId() {
+        return this.courseId;
     }
 
     public String getDate() {
@@ -55,8 +55,8 @@ public class Task {
         this.finished = finished;
     }
 
-    public void setClassId(Long classId) {
-        this.classId = classId;
+    public void setCourseId(Long courseId) {
+        this.courseId = courseId;
     }
 
     public void setDate(String date) {
@@ -75,20 +75,20 @@ public class Task {
 
         Task task = (Task)o;
         return this.id.equals(task.id) && this.name.equals(task.name)
-                && this.finished.equals(task.finished) && this.classId.equals(task.classId)
+                && this.finished.equals(task.finished) && this.courseId.equals(task.courseId)
                 && this.date.equals(task.date);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(this.id, this.name,
-                this.finished, this.classId, this.date);
+                this.finished, this.courseId, this.date);
     }
 
     @Override
     public String toString() {
         return "Task id: " + this.id + " name: " + this.name +
-                " finished: " + this.finished + " classId: " + this.classId
+                " finished: " + this.finished + " classId: " + this.courseId
                 + " date: " + this.date;
     }
 }

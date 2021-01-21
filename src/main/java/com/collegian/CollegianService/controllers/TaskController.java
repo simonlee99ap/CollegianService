@@ -67,7 +67,7 @@ public class TaskController {
                 .map(task -> {
                     task.setName(newTask.getName());
                     task.setFinished(newTask.getFinished());
-                    task.setClassId(newTask.getClassId());
+                    task.setCourseId(newTask.getCourseId());
                     task.setDate(newTask.getDate());
                     return repository.save(task);
                 }).orElseGet(() -> {
