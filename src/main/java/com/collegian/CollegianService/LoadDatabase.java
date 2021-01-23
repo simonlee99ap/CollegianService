@@ -17,15 +17,16 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initTaskDataBase(TaskRepository repository) {
         return args -> {
-            repository.save(new Task("example task 1", false, 3L, "January 15th, 2021"));
-            repository.save(new Task("example task 2", true, 3L, "January 2nd, 2021"));
+            repository.save(new Task("read book", false, 3L, "Jan 15 2021"));
+            repository.save(new Task("do homework", false, 3L, "Jan 02 2021"));
         };
     }
 
     @Bean
     CommandLineRunner initCourseDatabase(CourseRepository repository) {
         return args -> {
-            repository.save(new Course("course 1", "blue"));
+            repository.save(new Course("15122 - Principles of Imperative Computation", "blue"));
+            repository.save(new Course("15150 - Principles of Functional Programming", "red"));
         };
     }
 }
